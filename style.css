@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Merienda&display=swap');
+
+* {
+    font-family: 'Merienda', cursive;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #242333;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    align-items: center;
+    height: 100vh;
+    margin: 0 auto;
+    padding-top: 10px;
+    background-image: url(curtain.jpg);
+}
+
+img {
+    max-width: 80%;
+    position: relative;
+}
+
+.container-movie {
+    margin: 10px 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.container-movie select {
+    background-color: white;
+    border: 0;
+    border-radius: 5px;
+    font-size: 14px;
+    margin-top: 15px;
+    padding: 5px 15px 5px 15px;
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    outline: none;
+}
+
+.container {
+    perspective: 600px; /* make screen 3d */
+}
+
+
+.row {
+    display: flex;
+}
+
+.seat {
+    background-color: #444451;
+    height: 20px;
+    width: 40px;
+    margin: 8px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.seat.selected{
+    background-color: #6feaf6;
+}
+
+.seat.occupied {
+    background-color: red;
+}
+
+.seat:nth-of-type(2){
+    margin-right: 24px;
+}
+
+.seat:nth-last-of-type(2){
+    margin-left: 24px;
+}
+
+.seat:not(.occupied):hover{
+    cursor: pointer;
+    transform: scale(1.4);
+    background-color: #6feaf6;
+    transition: 0.5s;
+}
+
+.showcase .seat:not(.occupied):hover{
+    cursor: default;
+    transform: scale(1);
+    background-color: #444451;
+}
+
+.showcase .seat.selected:hover{
+    cursor: default;
+    transform: scale(1);
+    background-color: #6feaf6;
+}
+
+.showcase {
+    background-color: rgba(0,0,0,0.1);
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: rgb(235, 232, 232);
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+.showcase li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 10px;
+}
+
+.showcase small {
+    margin-left: 2px;
+}
+
+.screen {
+    background-color: white;
+    height: 80px;
+    width: 100%;
+    margin: 50px 0;
+    box-shadow: 0 3px 10px rgba(255,255,255,0.8);
+    transform: rotateX(-45deg);
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.screen p {
+    font-size: 26px;
+}
+
+p.text span {
+    color: #6feaf6;
+}
